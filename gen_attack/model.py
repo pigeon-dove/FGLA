@@ -1,7 +1,7 @@
 import torch.nn as nn
 
 
-class GivNet(nn.Module):
+class Generator(nn.Module):
     class ResConv(nn.Module):
         def __init__(self, channel_size):
             super().__init__()
@@ -19,7 +19,7 @@ class GivNet(nn.Module):
             return self.act(out)
 
     def __init__(self):
-        super(GivNet, self).__init__()
+        super(Generator, self).__init__()
 
         self.conv = nn.Sequential(
             nn.ConvTranspose2d(2048, 1024, 3, stride=2, padding=1, output_padding=1),  # 14 * 14

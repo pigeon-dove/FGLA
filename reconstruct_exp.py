@@ -6,7 +6,7 @@ from models import Resnet50
 from utils import make_dir_if_not_exist, setup_seed, progress_bar, show_imgs
 from dataset import get_grad_dl, get_dataloader
 from optim_attack import dlg_algorithm, grad_inversion_algorithm, invert_grad_algorithm
-from gen_attack import veloc_attack_algorithm, GivNet
+from gen_attack import veloc_attack_algorithm, Generator
 from torchmetrics.functional import peak_signal_noise_ratio, structural_similarity_index_measure
 from torchmetrics.image.lpip import LearnedPerceptualImagePatchSimilarity
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
             dummy_x = invert_grad_algorithm(grad, x, y, resnet50, (args.batch_size, 3, 224, 224), args.max_iteration,
                                             args.device, record_dir)
         else:
-            decoder = GivNet()
+            decoder = Generator()
             decoder.load_state_dict(torch.load(args.model_weights))
             dummy_x = veloc_attack_algorithm(grad, y, decoder, True, args.device)
 

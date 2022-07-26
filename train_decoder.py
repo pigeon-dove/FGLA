@@ -2,7 +2,7 @@ import torch
 import argparse
 from models import Resnet50
 from utils import make_dir_if_not_exist, setup_seed
-from gen_attack import train_decoder, GivNet
+from gen_attack import train_decoder, Generator
 
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     setup_seed(args.seed)
     resnet50 = Resnet50(pool=False)
-    decoder = GivNet()
+    decoder = Generator()
     decoder.load_state_dict(torch.load("./data/givnet_weights.pth"))
 
     train_decoder(record_dir,
