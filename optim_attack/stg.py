@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-def grad_inversion_algorithm(grad, y, mean_var_list, model, input_size, max_iteration, device):
+def stg_algorithm(grad, y, mean_var_list, model, input_size, max_iteration, device):
     grad = [g.to(device) for g in grad]
     model = model.to(device)
     y = y.to(device)

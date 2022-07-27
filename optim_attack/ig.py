@@ -4,7 +4,7 @@ from torchmetrics.functional import peak_signal_noise_ratio, structural_similari
 from utils import show_imgs
 
 
-def invert_grad_algorithm(grad, x, y, model: nn.Module, input_size, max_iteration, device, record_dir):
+def ig_algorithm(grad, x, y, model: nn.Module, input_size, max_iteration, device, record_dir):
     grad = [g.to(device) for g in grad]
     model = model.to(device)
     y = y.to(device)

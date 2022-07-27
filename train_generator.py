@@ -2,7 +2,7 @@ import torch
 import argparse
 from models import Resnet50
 from utils import make_dir_if_not_exist, setup_seed
-from gen_attack import train_decoder, Generator
+from gen_attack import train_generator, Generator
 
 torch.backends.cudnn.enabled = True
 torch.backends.cudnn.benchmark = True
@@ -20,19 +20,18 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    record_dir = f"./data/train_decoder/{args.exp_name}/"
+    record_dir = f"./data/train_generator/{args.exp_name}/"
     make_dir_if_not_exist(record_dir)
 
     setup_seed(args.seed)
     resnet50 = Resnet50(pool=False)
-    decoder = Generator()
-    decoder.load_state_dict(torch.load("./data/givnet_weights.pth"))
+    generator = Generator()
 
-    train_decoder(record_dir,
-                  args.batch_size,
-                  args.epochs,
-                  decoder,
-                  resnet50,
-                  args.device)
+    train_generator(record_dir,
+                    args.batch_size,
+                    args.epochs,
+                    generator,
+                    resnet50,
+                    args.device)
 
     print(f"finish training, see result in {record_dir}")

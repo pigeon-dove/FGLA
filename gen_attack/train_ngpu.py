@@ -10,7 +10,7 @@ import os
 import torch.distributed as dist
 
 
-def train_decoder(result_dir, batch_size, epochs, decoder, origin_model, device):
+def train_generator(result_dir, batch_size, epochs, decoder, origin_model, device):
     local_rank = int(os.environ["LOCAL_RANK"])
     dist.init_process_group(backend="nccl")
 

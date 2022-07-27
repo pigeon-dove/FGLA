@@ -1,3 +1,3 @@
 from .model import Generator
-from .train_ngpu import train_decoder
-from .algorithm import veloc_attack_algorithm
+from .train import train_generator
+from .algorithm import gen_attack_algorithm
