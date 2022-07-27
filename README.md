@@ -44,6 +44,8 @@ conv_out[torch.isinf(conv_out)] = 0.
 img = generator(conv_out)
 ```
 
+![effect](https://github.com/xuedongyun/FGLA/blob/master/images/effect.png?raw=true)
+
 
 
 ## Sample Usage
