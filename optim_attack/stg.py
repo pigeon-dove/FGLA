@@ -60,10 +60,9 @@ def stg_algorithm(grad, y, mean_var_list, model, input_size, max_iteration, devi
 
 def tv_loss_fn(x):
     bz = x.size(0)
-    dx = torch.mean(torch.abs(x[:, :, :, :-1] - x[:, :, :, 1:]))
-    dy = torch.mean(torch.abs(x[:, :, :-1, :] - x[:, :, 1:, :]))
-    # return (dx + dy) / bz
-    return dx + dy
+    dx = torch.sum(torch.abs(x[:, :, :, :-1] - x[:, :, :, 1:]))
+    dy = torch.sum(torch.abs(x[:, :, :-1, :] - x[:, :, 1:, :]))
+    return (dx + dy) / bz
 
 
 def l2_loss_fn(x):
