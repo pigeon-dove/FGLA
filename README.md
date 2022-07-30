@@ -58,17 +58,17 @@ python reconstruct_exp.py --exp_name="my_exp" --dataset="imagenet" --reconstruct
 
 The results all you need will be placed in ```data/reconstruct/{exp_name}```/
 
-| argument          | help                                                         | optional value                 |
-| ----------------- | ------------------------------------------------------------ | ------------------------------ |
-| --algorithm       | gradient leakage attack algorithm                            | fgla, dlg, stg, ig             |
-| --model_weights   | weights path for generator                                   |                                |
-| --reconstruct_num | number of reconstructed batches                              |                                |
-| --dataset         | dataset to use                                               | imagenet, cifar100, caltech256 |
-| --max_iteration   | iteration to reconstruct when use optimization-based algorithm |                                |
-| --exp_name        | the name of the experiment, used to create a folder          |                                |
-| --batch_size      | batch size                                                   |                                |
-| --device          | which device to use                                          |                                |
-| --seed            | random seed                                                  |                                |
+| argument          | help                                                       | optional value                 |
+| ----------------- |------------------------------------------------------------| ------------------------------ |
+| --algorithm       | gradient leakage attack algorithm                          | fgla, dlg, stg, ig             |
+| --model_weights   | weights path for generator                                 |                                |
+| --reconstruct_num | number of reconstructed batches                            |                                |
+| --dataset         | dataset to use                                             | imagenet, cifar100, caltech256 |
+| --max_iteration   | number of iterations when use optimization-based algorithm |                                |
+| --exp_name        | the name of the experiment, used to create a folder        |                                |
+| --batch_size      | batch size                                                 |                                |
+| --device          | which device to use                                        |                                |
+| --seed            | random seed                                                |                                |
 
 
 
