@@ -20,7 +20,7 @@ def parse_args():
     parser.add_argument("--max_iteration", help="iteration to reconstruct", default=20_000, type=int)
     parser.add_argument("--exp_name", help="experiment name used to create folder", default="exp_0")
     parser.add_argument("--batch_size", help="batch size for training", default=8, type=int)
-    parser.add_argument("--device", help="which device to use", default="cuda:1")
+    parser.add_argument("--device", help="which device to use", default="cuda:0")
     parser.add_argument("--seed", help="random seeds for experiments", default=1234, type=int)
     return parser.parse_args()
 
