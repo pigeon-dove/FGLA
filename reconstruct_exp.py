@@ -63,7 +63,7 @@ if __name__ == "__main__":
                                     args.max_iteration,
                                     args.device)
         elif args.algorithm == "ig":
-            dummy_x = ig_algorithm(grad, x, y, resnet50, (args.batch_size, 3, 224, 224), args.max_iteration,
+            dummy_x = ig_algorithm(grad, y, resnet50, (args.batch_size, 3, 224, 224), args.max_iteration,
                                    args.device, record_dir)
         else:
             decoder = Generator()

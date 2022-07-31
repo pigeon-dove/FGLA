@@ -1,7 +1,7 @@
 ### our own rules
 !/images/
 
-./z_only_for_exp.py
+.z_only_for_exp.py
 
 
 ### JetBrains template
