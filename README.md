@@ -1,4 +1,4 @@
-# FGLA: Fast Generation-Based Gradient Leakage Attacks against Highly Compressed Gradients
+git# FGLA: Fast Generation-Based Gradient Leakage Attacks against Highly Compressed Gradients
 
 
 
@@ -49,6 +49,10 @@ img = generator(conv_out)
 
 
 ## Sample Usage
+
+Download generator weights file [gen_weights.pth](https://drive.google.com/file/d/1x6KIpGXJARc9F0SMZUyTDy3h5-CQRIaR/view?usp=sharing) and place it in folder ```./data/```
+
+
 
 Reconstruct 10 batches of images using FGLA algorithm:
 
