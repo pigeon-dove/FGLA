@@ -1,4 +1,4 @@
-git# FGLA: Fast Generation-Based Gradient Leakage Attacks against Highly Compressed Gradients
+Fast Generation-Based Gradient Leakage Attacks against Highly Compressed Gradients
 
 
 
