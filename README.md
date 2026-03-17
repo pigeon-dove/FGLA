@@ -19,7 +19,7 @@ The whole attack process can be briefly described as:
 - Obtain the output feature of the convolutional layer from the gradient of the fully connected layer.
 - Sending the feature to the generator to get user images.
 
-<img src="https://github.com/xuedongyun/FGLA/blob/master/images/generator.png?raw=true" alt="generator.png" style="zoom: 25%;" />
+<img src="https://github.com/xuedongyun/FGLA/blob/master/images/generator.png?raw=true" alt="generator.png" style="zoom: 25%; background-color: white;" />
 
 The core code of the algorithm is **extremely simple**:
 
