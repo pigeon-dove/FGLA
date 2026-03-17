@@ -1,5 +1,8 @@
-Fast Generation-Based Gradient Leakage Attacks against Highly Compressed Gradients
+# Fast Generation-Based Gradient Leakage Attacks against Highly Compressed Gradients
 
+**IEEE INFOCOM 2023**
+
+Paper: https://ieeexplore.ieee.org/abstract/document/10229091/
 
 
 ## Abstract
